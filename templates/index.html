@@ -1,182 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html><html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="description" content="Extract CS2 crosshair codes and viewmodel settings from any Counter-Strike 2 demo">
-
+<meta name="description" content="Extract CS2 crosshair codes and viewmodel settings from any Counter-Strike 2 demo file, including pro matches from HLTV. Free and instant CS2 demo analyzer.">
 <meta name="robots" content="index,follow">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta property="og:title" content="CS2 Demo Crosshair & Viewmodel Extractor | Info Setting CS2">
-
-<meta property="og:description" content="Extract CS2 crosshair codes and viewmodel settings from any Counter-Strike 2 demo">
-
+<meta property="og:title" content="CS2 Demo Crosshair & Viewmodel Extractor | Pro HLTV Replay Analyzer">
+<meta property="og:description" content="Extract CS2 crosshair codes and viewmodel settings from any Counter-Strike 2 demo file, including pro matches from HLTV.">
 <meta property="og:type" content="website">
-
 <meta property="og:url" content="https://infosettingcs2.online">
-
 <meta property="og:image" content="https://infosettingcs2.online/static/logo.png">
-
 <link rel="canonical" href="https://infosettingcs2.online/">
-
-<link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
-
-<title>
-    CS2 Demo Crosshair & Viewmodel Extractor | Info Setting CS2
-</title>
-
-<link
-    rel="stylesheet"
-    href="{{ url_for('static', filename='style.css') }}"
->
-
+<link rel="icon" type="image/png" href="/static/favicon.png">
+<title>CS2 Demo Crosshair & Viewmodel Extractor | Info Setting CS2</title>
+<link rel="stylesheet" href="/static/style.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMSX6W3J7G"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-EMSX6W3J7G');
-</script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5148710555577944"
-crossorigin="anonymous"></script>
-
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+gtag('config', 'G-EMSX6W3J7G');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5148710555577944" crossorigin="anonymous"></script>
 </head>
-
 <body>
-
 <nav class="navbar">
-
     <a href="/" class="logo">
-
-        <img
-            src="{{ url_for('static', filename='logo.png') }}"
-            alt="Info Setting CS2"
-        >
-
-        <span>
-            Info Setting CS2
-        </span>
-
+        <img src="/static/logo.png" alt="Info Setting CS2">
+        <span>Info Setting CS2</span>
     </a>
-
     <div class="nav-links">
-
-        <a href="#" onclick="openInstructions(); return false;">
-            Instructions
-        </a>
-
-        <a href="#" onclick="openSupport(); return false;">
-            Support
-        </a>
-
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#" onclick="openSupport(); return false;">Support</a>
     </div>
-
 </nav>
 
 <div class="container">
-
-    <h1>
-        Info Setting CS2
-    </h1>
-
+    <h1>Info Setting CS2</h1>
     <p class="subtitle">
-        Extract the exact crosshair and viewmodel settings of any player
-        <span class="line-break">
-            from a Counter-Strike 2 demo.
-        </span>
+        Extract the exact crosshair codes and viewmodel settings of any player 
+        <span class="line-break">from any Counter-Strike 2 demo file (.dem) — including HLTV pro matches.</span>
     </p>
-
-    <form
-        id="uploadForm"
-        enctype="multipart/form-data"
-    >
-
-        <input
-            type="file"
-            name="demo"
-            id="fileInput"
-            accept=".dem"
-        >
-
-        <label
-            for="fileInput"
-            class="dropzone"
-        >
-
-            <div class="drop-title">
-                Drop your demo file here
-            </div>
-
-            <div class="drop-sub">
-                or click to browse (.dem)
-            </div>
-
+    
+    <!-- Upload Form Section -->
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="demo" id="fileInput" accept=".dem">
+        <label for="fileInput" class="dropzone">
+            <div class="drop-title">Drop your demo file here</div>
+            <div class="drop-sub">or click to browse (.dem)</div>
         </label>
-
     </form>
-
     <div id="result"></div>
 
-</div>
+    <hr style="margin: 40px 0; border: 0; border-top: 1px solid #333;">
 
-<div id="instructionsModal" class="modal">
-
-    <div class="modal-content">
-
-        <span class="close" onclick="closeInstructions()">
-            &times;
-        </span>
-
-        <h2>
-            Instructions
-        </h2>
-
-        <ol>
-            <li>Download a Counter-Strike 2 demo.</li>
-            <li>Upload the .dem file.</li>
-            <li>Choose any player and instantly extract their settings.</li>
-            <li>Copy the crosshair or viewmodel settings.</li>
+    <!-- SEO Section 1: How it works -->
+    <section id="how-it-works" class="seo-section">
+        <h2>How to Extract CS2 Crosshair & Viewmodel from Any Demo File</h2>
+        <p>Our free online tool allows you to analyze any Counter-Strike 2 replay file and instantly get the precise crosshair codes and viewmodel configurations used by the players in that match. Whether it is your own matchmaking game or a professional tournament match, you can copy their exact setup in seconds:</p>
+        <ol class="instructions-list">
+            <li><strong>Get your CS2 demo file:</strong> Download your own Premier/Faceit match replay, or grab a professional match demo from websites like HLTV.org.</li>
+            <li><strong>Upload the file:</strong> Drag and drop the <code>.dem</code> file into the box above or click browse to select it from your computer.</li>
+            <li><strong>Select any player:</strong> Once the demo analyzer processes the data, pick any player from the scoreboard to view their custom settings.</li>
+            <li><strong>Copy and paste:</strong> Instantly copy the crosshair share code or the viewmodel console commands (viewmodel_fov, offset_x, offset_y, offset_z) directly into your game.</li>
         </ol>
+    </section>
 
-    </div>
+    <!-- SEO Section 2: FAQ -->
+    <section id="faq" class="seo-section" style="margin-top: 40px;">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        
+        <h3>Can I extract settings from professional HLTV matches?</h3>
+        <p>Yes! You can extract the exact viewmodel and crosshair codes from any pro player. Just go to the "Results" or "Events" section on HLTV.org, find the match you want, download the "Demo" file, unzip it, and upload the <code>.dem</code> file to our tool.</p>
 
+        <h3>How do I apply the extracted viewmodel settings in CS2?</h3>
+        <p>Unlike crosshairs, viewmodels do not use a single share code. Our tool will provide you with the exact console commands (e.g., <code>viewmodel_fov</code>, <code>viewmodel_offset_x</code>, etc.). Simply copy the whole block of commands, open your CS2 developer console (~), paste them, and press Enter.</p>
+
+        <h3>Where can I find my personal CS2 demo files?</h3>
+        <p>By default, Steam downloads Counter-Strike 2 match replays to your local drive. You can find them inside your Steam directory under: <code>\steamapps\common\Counter-Strike Global Offensive\game\csgo\replays\</code>.</p>
+        
+        <h3>Is it safe to upload my .dem files here?</h3>
+        <p>Yes, absolutely. Our tool only parses the public metadata of the match (player profiles, crosshair strings, and viewmodel variables) required to display the settings. Your game files are analyzed safely and are never stored or distributed.</p>
+
+        <h3>Does this tool support Faceit and Matchmaking demos?</h3>
+        <p>Yes, this CS2 demo analyzer supports standard Valve Matchmaking, Premier mode, and competitive third-party platforms like Faceit as long as the file format is <code>.dem</code>.</p>
+    </section>
 </div>
 
+<!-- Support Modal -->
 <div id="supportModal" class="modal">
-
     <div class="modal-content">
-
-        <span class="close" onclick="closeSupport()">
-            &times;
-        </span>
-
-        <h2>
-            Support
-        </h2>
-
-        <p>
-            If this tool helped you, consider supporting future development.
-        </p>
-
-        <p>
-            Donations coming soon.
-        </p>
-
+        <span class="close" onclick="closeSupport()">&times;</span>
+        <h2>Support</h2>
+        <p>If this tool helped you, consider supporting future development.</p>
+        <p>Donations coming soon.</p>
     </div>
-
 </div>
 
-<script
-    src="{{ url_for('static', filename='script.js') }}"
-></script>
-
+<script src="/static/script.js"></script>
 </body>
-
 </html>
